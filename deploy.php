@@ -22,7 +22,7 @@ set('writable_dirs', []);
 
 // Hosts
 host('neutroni.hayo.fi')
-    ->user('neutroni-tunnus')
+    ->user('loksa')
     ->set('deploy_path', '~/public_html/{{application}}');
 
 
@@ -37,7 +37,6 @@ task('deploy', [
     'deploy:update_code',
     'deploy:shared',
     'deploy:writable',
-    // 'deploy:vendors',
     'deploy:clear_paths',
     'deploy:symlink',
     'deploy:unlock',
